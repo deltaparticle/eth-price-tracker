@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Investment Analyzer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.0.0/dist/ethers.umd.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Web3 Portfolio Manager</h1>
+    </header>
+    <main>
+        <button id="connectWallet">Connect Wallet</button>
+        <div id="accountArea" class="hidden">
+            <div id="network"></div>
+            <div id="account"></div>
+        </div>
+        <div id="timeFrameArea" class="hidden">
+            <select id="timeframe">
+                <option value="1">1 Day</option>
+                <option value="7">1 Week</option>
+                <option value="30">1 Month</option>
+                <option value="90">3 Months</option>
+                <option value="180">6 Months</option>
+                <option value="365">1 Year</option>
+            </select>
+            <button id="fetchData">Fetch Data</button>
+        </div>
+        <div id="chartContainer" class="hidden">
+            <canvas id="chart"></canvas>
+        </div>
+        <div id="investmentArea" class="hidden">
+            <input type="number" id="accountBalance" placeholder="Amount You Want to Invest" />
+            <button id="calculate">Calculate</button>
+        </div>
+        <div id="analysis" class="hidden"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
